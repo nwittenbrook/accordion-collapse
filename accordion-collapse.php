@@ -3,7 +3,7 @@
 	Plugin Name: Accordion Collapse
 	Plugin URI: http://www.washington.edu
 	Description: Shortcode to create collapsable and expandable content, controlled by headers
-	Version: 0.1
+	Version: 0.2
 	Author: Natalie Wittenbrook
 	*/
 
@@ -19,7 +19,7 @@
 		'</' . esc_attr($acol_header_type) . '>' . '<div class="acol-content">' . $content . '</div></div>';
 	}
 /*
-	// add button to WYSIWYG 
+	// add button to WYSIWYG - does not work for now
     // add button to editor
 	function acol_button() {
     	add_filter( 'mce_external_plugins', 'acol_add_buttons' );
