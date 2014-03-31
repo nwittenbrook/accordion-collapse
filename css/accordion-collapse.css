@@ -3,37 +3,6 @@ Author: Natalie Wittenbrook
 Description: CSS file for Accordion Collapse
 */
 
-/*
-.acol-header:before {
-	content: "\25BC";
-	font-size: 14px; 
-	color: #39275b;
-	padding-right: .5em;
-	vertical-align: top;
-}
-
-.acol-header:hover:before {
-	color: rgba(57, 39, 91, 0.8);
-}
-
-.acol-header:hover {
-	cursor: pointer;
-}
-
-.acol-container.closed > .acol-header:before {
-	content: "\25B6";
-	color: rgba(57, 39, 91, 1.0);
-}
-
-.acol-container.closed > .acol-header:hover:before {
-	color: rgba(57, 39, 91, 0.8);
-}
-.acol-container.closed > .acol-header:before {
-	content: "\25B6";
-	color: rgba(57, 39, 91, 1.0);
-}
-*/
-
 .acol-container.closed > .acol-content {
 	display: none;
 }
