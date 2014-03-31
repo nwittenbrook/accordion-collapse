@@ -3,6 +3,7 @@ Author: Natalie Wittenbrook
 Description: CSS file for Accordion Collapse
 */
 
+/*
 .acol-header:before {
 	content: "\25BC";
 	font-size: 14px; 
@@ -27,6 +28,11 @@ Description: CSS file for Accordion Collapse
 .acol-container.closed > .acol-header:hover:before {
 	color: rgba(57, 39, 91, 0.8);
 }
+.acol-container.closed > .acol-header:before {
+	content: "\25B6";
+	color: rgba(57, 39, 91, 1.0);
+}
+*/
 
 .acol-container.closed > .acol-content {
 	display: none;
@@ -34,4 +40,26 @@ Description: CSS file for Accordion Collapse
 
 .acol-content {
 	padding-left: 1.5em;
+}
+
+
+h3.acol-header {
+	background: url('../img/plus-min.png') 13px -22px no-repeat #ededed;
+	padding: 10px 10px 10px 33px;
+	cursor: pointer;
+	color: #3D3D3D;
+	font-size: 1em;
+	line-height: 23px;
+	-webkit-transition: background-position 0.5s ease;
+	-moz-transition: background-position 0.5s ease;
+    -o-transition: background-position 0.5s ease;
+    transition: background-position 0.5s ease;
+}
+
+.closed h3.acol-header {
+	background-position: 13px 17px;
+	-webkit-transition: background-position 0.5s ease;
+	-moz-transition: background-position 0.5s ease;
+    -o-transition: background-position 0.5s ease;
+    transition: background-position 0.5s ease;
 }
