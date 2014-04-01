@@ -15,8 +15,8 @@
 			'acol_header_type' => 'h3'
 			), $atts)); 
 
-		return '<div class="acol-container closed"><' . esc_attr($acol_header_type) . ' class= "acol-header" >' . esc_attr($acol_header) . 
-		'</' . esc_attr($acol_header_type) . '>' . '<div class="acol-content">' . $content . '</div></div>';
+		return '<div class="acol-container closed"><h3 class= "acol-header" >' . esc_attr($acol_header) . 
+		'</h3>' . '<div class="acol-content">' . $content . '</div></div>';
 	}
 /*
 	// add button to WYSIWYG - does not work for now
@@ -40,7 +40,9 @@
 	// load other resources
 	function enqueue_resources() {
 		wp_enqueue_script('jquery');
-		wp_register_script('acol-script', plugins_url('js/accordion-collapse.js', __FILE__), 'jquery');
+		wp_enqueue_script('jquery-ui-core');
+		wp_enqueue_script('jquery-effects-core');
+		wp_register_script('acol-script', plugins_url('js/accordion-collapse.js', __FILE__), array('jquery', 'jquery-ui-core', 'jquery-effects-core'));
 		wp_enqueue_script('acol-script');
 		wp_register_style('acol-style', plugins_url('css/accordion-collapse.css', __FILE__));
 		wp_enqueue_style('acol-style');
