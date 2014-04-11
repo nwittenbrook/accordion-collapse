@@ -8,14 +8,11 @@ jQuery(document).ready(function ($) {
 	// show or hide content when header is clicked
 	$('.acol-header').on('click', function (e) {
 		var $acol_header = $(this),
-			$container = $acol_header.parent();
+		$container = $acol_header.parent();
 		// show/hide content
-		$('.acol-container').each(function() {
-			if($(this) !== $container && !($(this).hasClass('closed'))) {
-				$(this).addClass('closed');
-			}
-		});
-		$container.toggleClass('closed');
+		$container.addClass('last');
+		$('.last').toggleClass('closed');
+		$('.closed').removeClass('last');
 	});
 
 	// add quicktag to plain text editor
